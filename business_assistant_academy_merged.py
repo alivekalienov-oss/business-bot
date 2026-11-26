@@ -31,9 +31,9 @@ from aiogram.types import (Message, CallbackQuery, ReplyKeyboardMarkup, Keyboard
 
 BOT_TOKEN=os.getenv("BOT_TOKEN","").strip()
 APP_URL=os.getenv("APP_URL","https://venture-skill-ladder.lovable.app").strip().rstrip("/")
-GEMINI_API_KEY=os.getenv("GEMINI_API_KEY","").strip()
+GEMINI_API_KEY="".join(os.getenv("GEMINI_API_KEY","").split())
 GOOGLE_CLIENT_ID=os.getenv("GOOGLE_CLIENT_ID","").strip()
-MODEL=os.getenv("GEMINI_MODEL","gemini-2.5-flash")
+MODEL="".join(os.getenv("GEMINI_MODEL","gemini-3.8-flash").split())
 DB=os.getenv("DB_PATH","academy.sqlite3")
 SECRET=os.getenv("SESSION_SECRET") or secrets.token_urlsafe(48)
 PORT=int(os.getenv("PORT","8000"))
